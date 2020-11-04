@@ -1,0 +1,16 @@
+<form  [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+<p>login-form works!</p>
+
+Name :
+<br>
+<input type="text" formControlName="name">
+<br>
+Address line: <br>
+<textarea name="" id="" cols="30" rows="10" formControlName="Address"></textarea><br>  
+<button (click)="updateValues()">update</button>
+<button type="submit" >Submit</button>
+</form>
+
+<div class="app">
+    <dynamic-form [config]="config"></dynamic-form>
+</div>
