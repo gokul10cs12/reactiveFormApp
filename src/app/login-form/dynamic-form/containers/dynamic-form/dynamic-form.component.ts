@@ -4,12 +4,18 @@ import {FormGroup, FormBuilder, Form} from '@angular/forms';
 @Component({
     selector: 'dynamic-form',
     styleUrls: ['dyanmic-form.component.scss'],
-    template: `
+    template:  `
     <form
-        class="dyanamic-form"
-        [formGroup]="form">
+      class="dynamic-form"
+      [formGroup]="form">
+      <ng-container
+        *ngFor="let field of config;"
+        dynamicField
+        [config]="field"
+        [group]="form">
+      </ng-container>
     </form>
-    `
+  `,
 })
 
 //Configurable Reactive Forms in Angular with dynamic components
@@ -23,9 +29,10 @@ export class DynamicFormComponent implements OnInit {
 
     constructor(private fb: FormBuilder){}
 
+    // tslint:disable-next-line: typedef
     ngOnInit(){
         this.form = this.createGroup();
-        console.log("test");
+        console.log('test');
     }
 
     // tslint:disable-next-line: typedef

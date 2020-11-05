@@ -15,17 +15,12 @@ config = [
     placeholder: 'enter your name',
   },
   {
-    type: 'select',
-    label: 'Favorite food',
-    name: 'food',
-    options: ['Pizza', 'Hot Dogs', 'Knagwe', 'coffee'],
-    placeholder: 'Select an option',
-  },
-  {
-    label: 'Submit',
-    name: 'submit',
-    type: 'button',
-  },
+    type: 'textarea',
+    label: 'permanent address',
+    name: 'address',
+    value: '',
+    placeholder: 'enter address',
+  }
 ];
 
 
